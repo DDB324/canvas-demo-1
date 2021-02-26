@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>画板</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <canvas id="canvas" width="100" height="100"></canvas>
-      <script src="main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>画板</title>
+        <link rel="stylesheet" href="reset.css"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div id="actions" class="actions">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-qianbi"></use>
+            </svg>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-xiangpi"></use>
+            </svg>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-saozhou"></use>
+            </svg>
+        </div>
+        <div id="download">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-baocun"></use>
+            </svg>
+        </div>
+        <ul id="colors">
+            <li id="black" class="">黑</li>
+            <li id="red" class="">红</li>
+            <li id="yellow" class="">黄</li>
+            <li id="green" class="">绿</li>
+            <li id="blue" class="">蓝</li>
+        </ul>
+        <ul id="line-style">
+            <li id="big" class="">大</li>
+            <li id="normal" class="">中</li>
+            <li id="small" class="">小</li>
+        </ul>
+        <canvas id="canvas" width="100" height="100"></canvas>
+        <script src="main.js"></script>
+        <script src="//at.alicdn.com/t/font_2390340_rwvmw45fzk9.js"></script>
+    </body>
 </html>
