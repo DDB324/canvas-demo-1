@@ -2,9 +2,105 @@
     display: block;
     background: #FAF9DE;
 }
+.active{
+    transform: scale(1.4);
+}
 .icon {
-    width: 1em; height: 1em;
+    width: 2em;
+    height: 2em;
     vertical-align: -0.15em;
-    fill: currentColor;
+    fill: #FFCC00;
     overflow: hidden;
+    margin-right: 1em;
+    transition: all 200ms;
+}
+
+.body {
+    position: relative;
+    font-size: 16px;
+}
+
+.features {
+    margin: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.download {
+    margin: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.colors {
+    margin: 1em;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.colors > li {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: .8em;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.colors > :nth-child(1) {
+    border-color: black;
+    background: #2d2d2d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .6);
+}
+
+.colors > :nth-child(2) {
+    border-color: red;
+    background: #ca0001;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, .6);
+}
+
+.colors > :nth-child(3) {
+    border: 1px solid yellow;
+    background: #c7c500;
+    box-shadow: 0 2px 5px rgba(255, 255, 0, .6);
+}
+
+.colors > :nth-child(4) {
+    border: 1px solid green;
+    background: #0d5600;
+    box-shadow: 0 2px 5px rgba(12, 91, 26, .6);
+}
+
+.colors > :nth-child(5) {
+    border: 2px solid blue;
+    background: #001ba5;
+    box-shadow: 0 2px 5px rgba(129, 95, 246, .6);
+}
+
+.line-style {
+    margin: 1em;
+    position: absolute;
+    top: 220px;
+    left: 0;
+}
+.line-style > li{
+    width: 2em;
+    background: black;
+    margin-bottom: 2em;
+    cursor: pointer;
+    transition: all 200ms;
+}
+.line-style > :nth-child(1){
+    height: 10px;
+}
+.line-style > :nth-child(2){
+    height: 8px;
+}
+.line-style > :nth-child(3){
+    height: 6px;
 }
