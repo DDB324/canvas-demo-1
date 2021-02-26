@@ -2,9 +2,11 @@
     display: block;
     background: #FAF9DE;
 }
-.active{
+
+.active {
     transform: scale(1.4);
 }
+
 .icon {
     width: 2em;
     height: 2em;
@@ -13,6 +15,7 @@
     overflow: hidden;
     margin-right: 1em;
     transition: all 200ms;
+    cursor: pointer;
 }
 
 .body {
@@ -88,19 +91,33 @@
     top: 220px;
     left: 0;
 }
-.line-style > li{
+
+.line-style > li {
+    height:2em;
     width: 2em;
-    background: black;
-    margin-bottom: 2em;
+    margin-bottom: 4px;
     cursor: pointer;
     transition: all 200ms;
+    position: relative;
 }
-.line-style > :nth-child(1){
+.line-style > li::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: black;
+    width:100%;
+}
+.line-style > :nth-child(1)::before {
     height: 10px;
 }
-.line-style > :nth-child(2){
-    height: 8px;
-}
-.line-style > :nth-child(3){
+
+.line-style > :nth-child(2)::before {
     height: 6px;
+}
+
+.line-style > :nth-child(3)::before {
+    height: 2px;
 }
