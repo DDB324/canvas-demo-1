@@ -40,7 +40,7 @@
 .colors {
     margin: 1em;
     position: absolute;
-    top: 50px;
+    top: 65px;
     left: 0;
 }
 
@@ -109,6 +109,7 @@
     transform: translate(-50%,-50%);
     background: black;
     width:100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .6);
 }
 .line-style > :nth-child(1)::before {
     height: 10px;
