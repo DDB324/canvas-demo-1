@@ -121,9 +121,11 @@ const draw = {
             draw.onTouchStart(e)
         };
         //获取当前的坐标,并将开始坐标和当前坐标之间画线,将当前坐标赋值到上次坐标
-        draw.canvas.ontouchmove = (e) => {
+        draw.canvas.addEventListener('touchmove',(e)=>{
+            //阻止iOS页面滑动
+            e.preventDefault()
             draw.onTouchMove(e)
-        };
+        },{passive:false})
     },
     bindFeatureEvents: () => {
         draw.pencil.onclick = (e) => {
