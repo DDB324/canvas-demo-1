@@ -172,7 +172,6 @@ const draw = {
     },
     bindLineStyleEvents: () => {
         draw.lineStyle.onclick = (e) => {
-            console.log(Object.keys(draw.lineStyleMap));
             if (Object.keys(draw.lineStyleMap).indexOf(e.target.id) >= 0) {
                 draw.currentLineStyle = e.target.id
                 draw.initLineStyle()
@@ -188,7 +187,11 @@ const draw = {
     },
     onTouchMove: (e) => {
         const [x, y] = draw.getCurrentTouchXY(e)
-        draw.drawLine(draw.last[0], draw.last[1], x, y);
+        if (draw.onRubber) {
+            draw.ctx.clearRect(draw.last[0] - 5, draw.last[1] - 5, 20, 20)
+        } else {
+            draw.drawLine(draw.last[0], draw.last[1], x, y);
+        }
         draw.last = [x, y];
     },
     onMouseDown: (e) => {
